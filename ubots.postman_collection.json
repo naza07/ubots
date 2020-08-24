@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "85007ed9-f7be-4d88-ba86-d90fd85c086b",
+		"name": "ubots",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "highest_total_purchase",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhbGVzc2FuZHJvLm5hemFyaW9AZ21haWwuY29tIiwiaWF0IjoxNTk4MjE5NTM2LCJleHAiOjE1OTgyNDgzMzZ9.FfRHbmW3X_TwAMPOtU7666Wiqljk-sFCfu6UrGexpOy6kkZfoap1y2_DKSo8M2uLOxvy6-GyTGyctpxSO-_k-DXlHWjUhn7LBIAlilVr7i0rWw8CESVbFo3YeBkD7reTS1wWp7oCGtKm_VsIqAaAaUTiSBIn8WtzAqdr0K61DEzEuCMdqLvCgep_EXhjzszH2kTKOXJJnZ1Hlgq2U1p0QRFO4zAYjInSJXGiOfHCWGYvbBL7FkbWJAVoSG1Bwdzi_anmDG1WENKF-9ABYF-56JorKVfBBk-G0uvY4vYyFL1exyyIyZpKs5RcXQ9ZTHhMlnwwihKCgREa_0kLuDsPJmDf_H6abEKm9O2DaicAvZ6m0mYDPHHZRmc0C3BSr0QyuLC2PnlBpf-fNw-GV30Lmzto1LjF2bP_4A2MtimDiRorwMM_bg5dituOLMbjCCj5uA0H7ujtuuQxjpKc6I0CzyNeTNSsRdjxreI21yOTR_ET0dRArRIwp-jhDMNSic7oxNka7hRtc4QA-HnvrUoAHQFqcC5MCxL1FdODZIsZi7qFEkGEzLOuhRbrWbTS5JFivSoc4CdCq_coKTgtaZRhg2jjjIP3_IogzlwUESh_OWcnMOhPYlILwpAUqsu5HePIVPrCViX1FvnFhk_4J-vsyJ5-xVNSquZCESRHRxsRp04",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://0.0.0.0:3000/api/v1/clients/most_loyal",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"clients",
+						"most_loyal"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recommend_wine",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhbGVzc2FuZHJvLm5hemFyaW9AZ21haWwuY29tIiwiaWF0IjoxNTk4MjE5NTM2LCJleHAiOjE1OTgyNDgzMzZ9.FfRHbmW3X_TwAMPOtU7666Wiqljk-sFCfu6UrGexpOy6kkZfoap1y2_DKSo8M2uLOxvy6-GyTGyctpxSO-_k-DXlHWjUhn7LBIAlilVr7i0rWw8CESVbFo3YeBkD7reTS1wWp7oCGtKm_VsIqAaAaUTiSBIn8WtzAqdr0K61DEzEuCMdqLvCgep_EXhjzszH2kTKOXJJnZ1Hlgq2U1p0QRFO4zAYjInSJXGiOfHCWGYvbBL7FkbWJAVoSG1Bwdzi_anmDG1WENKF-9ABYF-56JorKVfBBk-G0uvY4vYyFL1exyyIyZpKs5RcXQ9ZTHhMlnwwihKCgREa_0kLuDsPJmDf_H6abEKm9O2DaicAvZ6m0mYDPHHZRmc0C3BSr0QyuLC2PnlBpf-fNw-GV30Lmzto1LjF2bP_4A2MtimDiRorwMM_bg5dituOLMbjCCj5uA0H7ujtuuQxjpKc6I0CzyNeTNSsRdjxreI21yOTR_ET0dRArRIwp-jhDMNSic7oxNka7hRtc4QA-HnvrUoAHQFqcC5MCxL1FdODZIsZi7qFEkGEzLOuhRbrWbTS5JFivSoc4CdCq_coKTgtaZRhg2jjjIP3_IogzlwUESh_OWcnMOhPYlILwpAUqsu5HePIVPrCViX1FvnFhk_4J-vsyJ5-xVNSquZCESRHRxsRp04",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://0.0.0.0:3000/api/v1/clients/recommend_wine/000.000.000.06",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"clients",
+						"recommend_wine",
+						"000.000.000.06"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "highest_total_purchase",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhbGVzc2FuZHJvLm5hemFyaW9AZ21haWwuY29tIiwiaWF0IjoxNTk4MjE5NTM2LCJleHAiOjE1OTgyNDgzMzZ9.FfRHbmW3X_TwAMPOtU7666Wiqljk-sFCfu6UrGexpOy6kkZfoap1y2_DKSo8M2uLOxvy6-GyTGyctpxSO-_k-DXlHWjUhn7LBIAlilVr7i0rWw8CESVbFo3YeBkD7reTS1wWp7oCGtKm_VsIqAaAaUTiSBIn8WtzAqdr0K61DEzEuCMdqLvCgep_EXhjzszH2kTKOXJJnZ1Hlgq2U1p0QRFO4zAYjInSJXGiOfHCWGYvbBL7FkbWJAVoSG1Bwdzi_anmDG1WENKF-9ABYF-56JorKVfBBk-G0uvY4vYyFL1exyyIyZpKs5RcXQ9ZTHhMlnwwihKCgREa_0kLuDsPJmDf_H6abEKm9O2DaicAvZ6m0mYDPHHZRmc0C3BSr0QyuLC2PnlBpf-fNw-GV30Lmzto1LjF2bP_4A2MtimDiRorwMM_bg5dituOLMbjCCj5uA0H7ujtuuQxjpKc6I0CzyNeTNSsRdjxreI21yOTR_ET0dRArRIwp-jhDMNSic7oxNka7hRtc4QA-HnvrUoAHQFqcC5MCxL1FdODZIsZi7qFEkGEzLOuhRbrWbTS5JFivSoc4CdCq_coKTgtaZRhg2jjjIP3_IogzlwUESh_OWcnMOhPYlILwpAUqsu5HePIVPrCViX1FvnFhk_4J-vsyJ5-xVNSquZCESRHRxsRp04",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://0.0.0.0:3000/api/v1/clients/highest_total_purchase",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"clients",
+						"highest_total_purchase"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "biggest_single_purchase",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhbGVzc2FuZHJvLm5hemFyaW9AZ21haWwuY29tIiwiaWF0IjoxNTk4MjE5NTM2LCJleHAiOjE1OTgyNDgzMzZ9.FfRHbmW3X_TwAMPOtU7666Wiqljk-sFCfu6UrGexpOy6kkZfoap1y2_DKSo8M2uLOxvy6-GyTGyctpxSO-_k-DXlHWjUhn7LBIAlilVr7i0rWw8CESVbFo3YeBkD7reTS1wWp7oCGtKm_VsIqAaAaUTiSBIn8WtzAqdr0K61DEzEuCMdqLvCgep_EXhjzszH2kTKOXJJnZ1Hlgq2U1p0QRFO4zAYjInSJXGiOfHCWGYvbBL7FkbWJAVoSG1Bwdzi_anmDG1WENKF-9ABYF-56JorKVfBBk-G0uvY4vYyFL1exyyIyZpKs5RcXQ9ZTHhMlnwwihKCgREa_0kLuDsPJmDf_H6abEKm9O2DaicAvZ6m0mYDPHHZRmc0C3BSr0QyuLC2PnlBpf-fNw-GV30Lmzto1LjF2bP_4A2MtimDiRorwMM_bg5dituOLMbjCCj5uA0H7ujtuuQxjpKc6I0CzyNeTNSsRdjxreI21yOTR_ET0dRArRIwp-jhDMNSic7oxNka7hRtc4QA-HnvrUoAHQFqcC5MCxL1FdODZIsZi7qFEkGEzLOuhRbrWbTS5JFivSoc4CdCq_coKTgtaZRhg2jjjIP3_IogzlwUESh_OWcnMOhPYlILwpAUqsu5HePIVPrCViX1FvnFhk_4J-vsyJ5-xVNSquZCESRHRxsRp04",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://0.0.0.0:3000/api/v1/clients/biggest_single_purchase",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"clients",
+						"biggest_single_purchase"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authorization",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"alessandro.nazario@gmail.com\",\r\n    \"password\": \"nazario@12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:3000/api/authenticate/login",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"authenticate",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

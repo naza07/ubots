@@ -1,0 +1,260 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Ubots",
+    "description": "Histórico de compras de uma loja de vinho. E",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://{host}",
+      "variables": {
+        "host": {
+          "default": "localhost:3000"
+        }
+      }
+    },
+    {
+      "url": "http://{host}",
+      "variables": {
+        "host": {
+          "default": "localhost:3000"
+        }
+      }
+    }
+  ],
+  "tags": [
+    {
+      "name": "authenticate"
+    },
+    {
+      "name": "message"
+    }
+  ],
+  "paths": {
+    "/authenticate/login": {
+      "post": {
+        "tags": [
+          "authenticate"
+        ],
+        "summary": "Authenticate user to use API methods",
+        "description": "The returned token expires in 8 hours",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "example": {
+                  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+                  "token_type": "Bearer"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "example": {
+                  "error": {
+                    "statusCode": 500,
+                    "code": "INTERNAL_SERVER_ERROR"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "BasicAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/clients/recommend_wine/{cpf}": {
+      "get": {
+        "tags": [
+          "message"
+        ],
+        "summary": "Recomenda um vinho para um determinado cliente a partir do histórico de compras.",
+        "parameters": [
+          {
+            "name": "cpf",
+            "in": "path",
+            "description": "CPF do cliente no seguinte padrão: 000.000.000.00",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "example": {
+                    "wine": "Casa Valduga Raízes"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "example": {
+                  "error": {
+                    "statusCode": 500,
+                    "code": "INTERNAL_SERVER_ERROR"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "IAM": []
+          }
+        ]
+      },
+      "/api/v1/clients/highest_total_purchase": {
+        "get": {
+          "tags": [
+            "message"
+          ],
+          "summary": "Lista os clientes ordenados pelo maior valor total em compras",
+          "parameters": [
+          ],
+          "requestBody": {
+          },
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "application/json": {
+                  "example": {
+                      "id": 6,
+                      "nome": "Pamela",
+                      "cpf": "000.000.000.06"
+                    }
+                  }
+                }
+              }
+            },
+            "500": {
+              "description": "Internal Server Error",
+              "content": {
+                "application/json": {
+                  "example": {
+                    "error": {
+                      "statusCode": 500,
+                      "code": "INTERNAL_SERVER_ERROR"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "security": [
+            {
+              "IAM": []
+            }
+          ]
+        },
+        "/api/v1/clients/biggest_single_purchase": {
+          "get": {
+            "tags": [
+              "message"
+            ],
+            "summary": "Mostra o cliente com maior compra única no último ano (2016).",
+            "parameters": [
+            ],
+            "requestBody": {
+            },
+            "responses": {
+              "200": {
+                "description": "Success",
+                "content": {
+                  "application/json": {
+                    "example": {
+                        "id": 6,
+                        "nome": "Pamela",
+                        "cpf": "000.000.000.06"
+                      }
+                    }
+                  }
+                }
+              },
+              "500": {
+                "description": "Internal Server Error",
+                "content": {
+                  "application/json": {
+                    "example": {
+                      "error": {
+                        "statusCode": 500,
+                        "code": "INTERNAL_SERVER_ERROR"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "security": [
+              {
+                "IAM": []
+              }
+            ]
+          },
+          "/api/v1/clients/most_loyal": {
+            "get": {
+              "tags": [
+                "message"
+              ],
+              "summary": "Mostra o cliente com maior compra única no último ano (2016).",
+              "parameters": [
+              ],
+              "requestBody": {
+              },
+              "responses": {
+                "200": {
+                  "description": "Success",
+                  "content": {
+                    "application/json": {
+                      "example": {
+                          "id": 6,
+                          "nome": "Pamela",
+                          "cpf": "000.000.000.06"
+                        }
+                      }
+                    }
+                  }
+                },
+                "500": {
+                  "description": "Internal Server Error",
+                  "content": {
+                    "application/json": {
+                      "example": {
+                        "error": {
+                          "statusCode": 500,
+                          "code": "INTERNAL_SERVER_ERROR"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "security": [
+                {
+                  "IAM": []
+                }
+              ]
+            }
+    }
+}
+    
